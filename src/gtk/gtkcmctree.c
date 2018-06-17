@@ -1126,6 +1126,14 @@ gtk_cmctree_class_init (GtkCMCTreeClass *klass)
 				GDK_KEY_plus, GDK_CONTROL_MASK,
 				"change_focus_row_expansion", 1,
 				G_TYPE_ENUM, GTK_CMCTREE_EXPANSION_EXPAND_RECURSIVE);
+  gtk_binding_entry_add_signal (binding_set,
+				GDK_KEY_Right, 0,
+				"change_focus_row_expansion", 1,
+				G_TYPE_ENUM, GTK_CMCTREE_EXPANSION_EXPAND);
+  gtk_binding_entry_add_signal (binding_set,
+				GDK_KEY_Right, GDK_CONTROL_MASK,
+				"change_focus_row_expansion", 1,
+				G_TYPE_ENUM, GTK_CMCTREE_EXPANSION_EXPAND_RECURSIVE);
 
   gtk_binding_entry_add_signal (binding_set,
 				GDK_KEY_KP_Add, 0,
